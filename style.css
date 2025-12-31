@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&display=swap');
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+    background: linear-gradient(
+        120deg,
+        #ee94ca,
+        #dbf681,
+        #9783e5,
+        #f9c449
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+
+ 
+    font-family: 'Bitter', serif;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+  background: linear-gradient(
+
+   #ee94ca,
+        #dbf681,
+        #9783e5,
+        #f9c449
+   );
+  padding: 25px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.input-box {
+  display: flex;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+}
+
+.input-box button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background:#f9c449,
+   #9783e5
+  ;
+  color: rgb(176, 210, 51);
+  cursor: pointer;
+  font-weight: 600; 
+}
+
+ul {
+  margin-top: 20px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background: #7bdd6c;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 500; 
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background: rgb(236, 91, 91);
+  border: none;
+  color: rgb(200, 57, 57);
+  border-radius: 3px;
+  padding: 3px 7px;
+  cursor: pointer;
+  font-weight: 600; 
+}
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .input-box button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  li {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  li div button {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
